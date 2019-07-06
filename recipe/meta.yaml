@@ -1,4 +1,4 @@
-{% set version = '1.4.3' %}
+{% set version = '1.5.0' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/quanteda_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/quanteda/quanteda_{{ version }}.tar.gz
-  sha256: 6c6480b206c803ad67697c35d0897b64d718febbbe3d69ae0c51ad8c75170352
+  sha256: b4f65b0cb00592bdb21b08092e7bae1c0fbe63158d0f64ef59d297356546fc9f
 
 build:
   merge_build_host: True  # [win]
@@ -47,6 +47,7 @@ requirements:
     - r-lubridate
     - r-magrittr
     - r-network
+    - r-proxyc >=0.1.4
     - r-sna
     - r-spacyr
     - r-stopwords
@@ -70,6 +71,7 @@ requirements:
     - r-lubridate
     - r-magrittr
     - r-network
+    - r-proxyc >=0.1.4
     - r-sna
     - r-spacyr
     - r-stopwords
@@ -101,13 +103,13 @@ extra:
     - stevierene82
 
 # Package: quanteda
-# Version: 1.4.3
+# Version: 1.5.0
 # Title: Quantitative Analysis of Textual Data
 # Description: A fast, flexible, and comprehensive framework for  quantitative text analysis in R.  Provides functionality for corpus management, creating and manipulating tokens and ngrams, exploring keywords in context,  forming and manipulating sparse matrices of documents by features and feature co-occurrences, analyzing keywords, computing feature similarities and distances, applying content dictionaries, applying supervised and unsupervised machine learning,  visually representing text and text analyses, and more.
 # Authors@R: c(  person("Kenneth", "Benoit", email = "kbenoit@lse.ac.uk", role = c("cre", "aut", "cph"), comment = c(ORCID = "0000-0002-0797-564X")),  person("Kohei", "Watanabe", email = "watanabe.kohei@gmail.com", role = "aut", comment = c(ORCID = "0000-0001-6519-5265")),  person("Haiyan", "Wang", email = "whyinsa@yahoo.com", role = "aut", comment = c(ORCID = "0000-0003-4992-4311")), person("Paul", "Nulty", email = "paul.nulty@gmail.com", role = "aut", comment = c(ORCID = "0000-0002-7214-4666")),  person("Adam", "Obeng", email = "quanteda@binaryeagle.com", role = "aut", comment = c(ORCID = "0000-0002-2906-4775")), person("Stefan", "Mller", email = "mullers@tcd.ie", role = "aut", comment = c(ORCID = "0000-0002-6315-4125")), person("Akitaka", "Matsuo", email = "a.matsuo@lse.ac.uk", role = "aut", comment = c(ORCID = "0000-0002-3323-6330")), person("Jiong Wei", "Lua", email = "J.W.Lua@lse.ac.uk", role = "aut"), person("Patrick O.", "Perry", email = "patperry@gmail.com", role = "aut", comment = c(ORCID = "0000-0001-7460-127X")), person("Jouni", "Kuha", email = "j.kuha@lse.ac.uk", role = "aut", comment = c(ORCID = "0000-0002-1156-8465")), person("Benjamin", "Lauderdale", email = "b.e.lauderdale@lse.ac.uk", role = "aut", comment = c(ORCID = "0000-0003-3090-0969")),     person("William", "Lowe", email = "wlowe@princeton.edu", role = "aut", comment = c(ORCID = "0000-0002-1549-6163")), person("Christian", "Mller", email = "C.Mueller@lse.ac.uk", role = "ctb"), person("Lori", "Young", role = "dtc", comment = "Lexicoder Sentiment Dictionary 2015"), person("Stuart", "Soroka", role = "dtc", comment = "Lexicoder Sentiment Dictionary 2015"), person("Ian", "Fellows", email = "ian@fellstat.com", role = "cph",  comment = "authored wordcloud C source code (modified)"), person("European Research Council", role = "fnd", comment = "ERC-2011-StG 283794-QUANTESS") )
 # License: GPL-3
 # Depends: R (>= 3.1.0), methods
-# Imports: data.table (>= 1.9.6), extrafont, fastmatch, ggplot2 (>= 2.2.0), ggrepel, lubridate, magrittr, Matrix (>= 1.2), network, RSpectra, Rcpp (>= 0.12.12), RcppParallel, sna, SnowballC, spacyr, stopwords, stringi, xml2, yaml
+# Imports: data.table (>= 1.9.6), extrafont, fastmatch, ggplot2 (>= 2.2.0), ggrepel, lubridate, magrittr, Matrix (>= 1.2), network, RSpectra, Rcpp (>= 0.12.12), RcppParallel, sna, SnowballC, spacyr, stopwords, stringi, xml2, yaml, proxyC (>= 0.1.4)
 # LinkingTo: Rcpp, RcppParallel, RcppArmadillo (>= 0.7.600.1.0)
 # Suggests: ca, dplyr, DT, e1071, entropy, ExPosition, lda, lsa, proxy, purrr, RColorBrewer, rmarkdown, slam, spelling, stm, svs, testthat, text2vec, tibble, tidytext, tm (>= 0.6), topicmodels, xtable, knitr, igraph, wordcloud
 # URL: https://quanteda.io
@@ -120,8 +122,8 @@ extra:
 # RoxygenNote: 6.1.1
 # SystemRequirements: C++11
 # NeedsCompilation: yes
-# Packaged: 2019-04-01 04:05:39 UTC; kbenoit
+# Packaged: 2019-07-04 10:06:25 UTC; kbenoit
 # Author: Kenneth Benoit [cre, aut, cph] (<https://orcid.org/0000-0002-0797-564X>), Kohei Watanabe [aut] (<https://orcid.org/0000-0001-6519-5265>), Haiyan Wang [aut] (<https://orcid.org/0000-0003-4992-4311>), Paul Nulty [aut] (<https://orcid.org/0000-0002-7214-4666>), Adam Obeng [aut] (<https://orcid.org/0000-0002-2906-4775>), Stefan Mller [aut] (<https://orcid.org/0000-0002-6315-4125>), Akitaka Matsuo [aut] (<https://orcid.org/0000-0002-3323-6330>), Jiong Wei Lua [aut], Patrick O. Perry [aut] (<https://orcid.org/0000-0001-7460-127X>), Jouni Kuha [aut] (<https://orcid.org/0000-0002-1156-8465>), Benjamin Lauderdale [aut] (<https://orcid.org/0000-0003-3090-0969>), William Lowe [aut] (<https://orcid.org/0000-0002-1549-6163>), Christian Mller [ctb], Lori Young [dtc] (Lexicoder Sentiment Dictionary 2015), Stuart Soroka [dtc] (Lexicoder Sentiment Dictionary 2015), Ian Fellows [cph] (authored wordcloud C source code (modified)), European Research Council [fnd] (ERC-2011-StG 283794-QUANTESS)
 # Maintainer: Kenneth Benoit <kbenoit@lse.ac.uk>
 # Repository: CRAN
-# Date/Publication: 2019-04-01 19:00:02 UTC
+# Date/Publication: 2019-07-04 13:30:03 UTC
