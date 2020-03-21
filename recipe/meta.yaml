@@ -81,7 +81,7 @@ test:
 
 about:
   home: https://quanteda.io
-  license: GPL-3
+  license: GPL-3.0
   summary: A fast, flexible, and comprehensive framework for quantitative text analysis in R.  Provides
     functionality for corpus management, creating and manipulating tokens and ngrams,
     exploring keywords in context, forming and manipulating sparse matrices of documents
