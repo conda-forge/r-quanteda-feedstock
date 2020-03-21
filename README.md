@@ -3,7 +3,7 @@ About r-quanteda
 
 Home: https://quanteda.io
 
-Package license: GPL-3
+Package license: GPL-3.0
 
 Feedstock license: BSD 3-Clause
 
