@@ -38,8 +38,8 @@ requirements:
     #- r-rcppparallel
     #- r-snowballc
     #- r-data.table >=1.9.6
-    - r-extrafont
-    - r-fastmatch
+    #- r-extrafont
+    #- r-fastmatch
     #- r-ggplot2 >=2.2.0
     #- r-ggrepel
     #- r-jsonlite
