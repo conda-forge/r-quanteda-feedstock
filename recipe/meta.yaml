@@ -43,7 +43,7 @@ requirements:
     #- r-ggplot2 >=2.2.0
     #- r-ggrepel
     #- r-jsonlite
-    - r-magrittr
+    #- r-magrittr
     - r-network
     #- r-proxyc >=0.1.4
     #- r-sna
