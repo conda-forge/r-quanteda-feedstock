@@ -32,10 +32,10 @@ requirements:
     - {{posix}}zip               # [win]
   host:
     - r-base
-    - r-matrix >=1.2
-    - r-rcpp >=0.12.12
-    - r-rcpparmadillo >=0.7.600.1.0
-    - r-rcppparallel
+    #- r-matrix >=1.2
+    #- r-rcpp >=0.12.12
+    #- r-rcpparmadillo >=0.7.600.1.0
+    #- r-rcppparallel
     - r-snowballc
     - r-data.table >=1.9.6
     - r-extrafont
@@ -45,12 +45,12 @@ requirements:
     - r-jsonlite
     - r-magrittr
     - r-network
-    - r-proxyc >=0.1.4
-    - r-sna
-    - r-stopwords
-    - r-stringi
-    - r-xml2
-    - r-yaml
+    #- r-proxyc >=0.1.4
+    #- r-sna
+    #- r-stopwords
+    #- r-stringi
+    #- r-xml2
+    #- r-yaml
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
