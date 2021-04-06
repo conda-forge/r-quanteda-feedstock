@@ -1,4 +1,4 @@
-{% set version = "2.1.2" %}
+{% set version = "3.0.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/quanteda_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/quanteda/quanteda_{{ version }}.tar.gz
-  sha256: 7eb3740d0c0e6e429c2a5ed4bc32372b166d8ef72e269d7d5e2decf2eae3328f
+  sha256: 484a287cb0a10b274f70228ecd01e1e8a6581971165cf22594e5e90bdb74322c
 
 build:
   merge_build_host: true  # [win]
@@ -34,22 +34,12 @@ requirements:
   host:
     - r-base
     - r-matrix >=1.2
-    - r-rspectra
     - r-rcpp >=0.12.12
     - r-rcpparmadillo >=0.7.600.1.0
     - r-rcppparallel
     - r-snowballc
-    - r-data.table >=1.9.6
-    - r-extrafont
     - r-fastmatch
-    - r-ggplot2 >=2.2.0
-    - r-ggrepel
-    - r-lubridate
     - r-magrittr
-    - r-network
-    - r-proxyc >=0.1.4
-    - r-sna
-    - r-spacyr
     - r-stopwords
     - r-stringi
     - r-xml2
@@ -58,22 +48,12 @@ requirements:
     - r-base
     - {{ native }}gcc-libs         # [win]
     - r-matrix >=1.2
-    - r-rspectra
     - r-rcpp >=0.12.12
     - r-rcpparmadillo >=0.7.600.1.0
     - r-rcppparallel
     - r-snowballc
-    - r-data.table >=1.9.6
-    - r-extrafont
     - r-fastmatch
-    - r-ggplot2 >=2.2.0
-    - r-ggrepel
-    - r-lubridate
     - r-magrittr
-    - r-network
-    - r-proxyc >=0.1.4
-    - r-sna
-    - r-spacyr
     - r-stopwords
     - r-stringi
     - r-xml2
@@ -86,11 +66,12 @@ test:
 
 about:
   home: https://quanteda.io
-  license: GPL-3
+  license: GPL-3.0-only
   summary: A fast, flexible, and comprehensive framework for quantitative text analysis in R.  Provides functionality for corpus management, creating and manipulating tokens and ngrams, exploring keywords in context, forming and manipulating sparse matrices of documents by features and feature co-occurrences, analyzing keywords,
     computing feature similarities and distances, applying content dictionaries, applying supervised and unsupervised machine learning, visually representing text and text analyses, and more.
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
