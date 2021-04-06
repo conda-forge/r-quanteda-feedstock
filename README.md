@@ -54,6 +54,20 @@ Current build status
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-quanteda-feedstock?branchName=master&jobName=osx&configuration=osx_64_r_base4.0" alt="variant">
                 </a>
               </td>
+            </tr><tr>
+              <td>win_64_r_base3.6</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3459&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-quanteda-feedstock?branchName=master&jobName=win&configuration=win_64_r_base3.6" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_r_base4.0</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3459&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-quanteda-feedstock?branchName=master&jobName=win&configuration=win_64_r_base4.0" alt="variant">
+                </a>
+              </td>
             </tr>
           </tbody>
         </table>
