@@ -1,11 +1,22 @@
+About r-quanteda-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-quanteda-feedstock/blob/main/LICENSE.txt)
+
 About r-quanteda
-================
+----------------
 
 Home: https://quanteda.io
 
 Package license: GPL-3.0-only
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-quanteda-feedstock/blob/main/LICENSE.txt)
+Summary: A fast, flexible, and comprehensive framework for quantitative text analysis in R.  Provides functionality for corpus management, creating and manipulating tokens and ngrams, exploring keywords in context, forming and manipulating sparse matrices of documents by features and feature co-occurrences, analyzing keywords, computing feature similarities and distances, applying content dictionaries, applying supervised and unsupervised machine learning, visually representing text and text analyses, and more.
+About r-quanteda
+----------------
+
+Home: https://quanteda.io
+
+Package license: GPL-3.0-only
 
 Summary: A fast, flexible, and comprehensive framework for quantitative text analysis in R.  Provides functionality for corpus management, creating and manipulating tokens and ngrams, exploring keywords in context, forming and manipulating sparse matrices of documents by features and feature co-occurrences, analyzing keywords, computing feature similarities and distances, applying content dictionaries, applying supervised and unsupervised machine learning, visually representing text and text analyses, and more.
 
