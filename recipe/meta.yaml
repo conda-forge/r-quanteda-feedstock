@@ -1,4 +1,4 @@
-{% set version = "3.3.1" %}
+{% set version = "4.0.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/quanteda_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/quanteda/quanteda_{{ version }}.tar.gz
-  sha256: 628542307d7ac45d4996fbc993a43ed5efcca73d97735ca74a10ccea401d4166
+  sha256: b21c650c01f925e406057950455991f87979708e321688abf86638bbc63504e8
 
 build:
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
