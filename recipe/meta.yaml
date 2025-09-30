@@ -47,6 +47,7 @@ requirements:
     - r-stringi
     - r-xml2
     - r-yaml
+    - tbb-devel
   run:
     - r-base
     - r-matrix >=1.2
