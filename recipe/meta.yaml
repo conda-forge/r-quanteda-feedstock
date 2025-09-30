@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/quanteda_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/quanteda/quanteda_{{ version }}.tar.gz
-  sha256: 628542307d7ac45d4996fbc993a43ed5efcca73d97735ca74a10ccea401d4166
+  sha256: 100d20bc47cf056bf2ca030eb9ae91c376cf575063d76126563acd3b1b6699f3
 
 build:
   number: 4
