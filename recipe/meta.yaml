@@ -48,7 +48,7 @@ requirements:
     - r-stringi
     - r-xml2
     - r-yaml
-    - tbb-devel
+    - tbb-devel                      # [not win]
   run:
     - r-base
     - r-matrix >=1.2
