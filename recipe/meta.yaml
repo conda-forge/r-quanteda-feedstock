@@ -34,6 +34,7 @@ requirements:
     - {{ posix }}sed
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
+    - pkg-config                       # [not win]
   host:
     - r-base
     - r-matrix >=1.2
