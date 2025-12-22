@@ -33,6 +33,8 @@ requirements:
     - {{ posix }}zip               # [win]
     - pkg-config
   host:
+    - libblas
+    - liblapack
     - r-base
     - r-matrix >=1.2
     - r-rcpp >=0.12.12
