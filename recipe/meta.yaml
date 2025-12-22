@@ -46,7 +46,7 @@ requirements:
     - r-stringi
     - r-xml2
     - r-yaml
-    - tbb-devel
+    - tbb-devel =2021
   run:
     - r-base
     - r-matrix >=1.2
