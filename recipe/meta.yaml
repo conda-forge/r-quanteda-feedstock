@@ -34,13 +34,11 @@ requirements:
     - {{ posix }}sed
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
-    - pkg-config                       # [not win]
+    - pkg-config
   host:
     - r-base
     - r-matrix >=1.2
     - r-rcpp >=0.12.12
-    - r-rcpparmadillo >=0.7.600.1.0
-    - r-rcppparallel
     - r-snowballc
     - r-fastmatch
     - r-magrittr
@@ -48,13 +46,11 @@ requirements:
     - r-stringi
     - r-xml2
     - r-yaml
-    - tbb-devel                      # [not win]
+    - tbb-devel
   run:
     - r-base
     - r-matrix >=1.2
     - r-rcpp >=0.12.12
-    - r-rcpparmadillo >=0.7.600.1.0
-    - r-rcppparallel
     - r-snowballc
     - r-fastmatch
     - r-magrittr
