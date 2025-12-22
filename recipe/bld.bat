@@ -3,6 +3,8 @@
 
 :: set PATH=%PATH%;%PREFIX%\lib\R\library\RcppParallel\lib\x64
 
+sed -i -e "s/void R_init_quanteda/__declspec(dllexport) void R_init_quanteda/" src/RcppExports.cpp
+
 "%R%" CMD INSTALL --build . %R_ARGS%
 IF %ERRORLEVEL% NEQ 0 exit 1
 
