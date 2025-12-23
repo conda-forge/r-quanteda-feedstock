@@ -1,4 +1,4 @@
-{% set version = "3.3.1" %}
+{% set version = "4.3.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/quanteda_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/quanteda/quanteda_{{ version }}.tar.gz
-  sha256: 628542307d7ac45d4996fbc993a43ed5efcca73d97735ca74a10ccea401d4166
+  sha256: 100d20bc47cf056bf2ca030eb9ae91c376cf575063d76126563acd3b1b6699f3
 
 build:
-  number: 3
+  number: 4
   rpaths:
     - lib/R/lib/
     - lib/
@@ -23,23 +23,19 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}              # [not win]
-    - {{ stdlib("c") }}                # [not win]
-    - {{ compiler('m2w64_c') }}        # [win]
-    - {{ stdlib("m2w64_c") }}          # [win]
-    - {{ compiler('cxx') }}            # [not win]
-    - {{ compiler('m2w64_cxx') }}      # [win]
+    - {{ compiler('c') }}
+    - {{ stdlib("c") }}
+    - {{ compiler('cxx') }}
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
-    - {{ posix }}sed               # [win]
+    - {{ posix }}sed
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
+    - pkg-config
   host:
     - r-base
     - r-matrix >=1.2
     - r-rcpp >=0.12.12
-    - r-rcpparmadillo >=0.7.600.1.0
-    - r-rcppparallel
     - r-snowballc
     - r-fastmatch
     - r-magrittr
@@ -47,12 +43,11 @@ requirements:
     - r-stringi
     - r-xml2
     - r-yaml
+    - tbb-devel
   run:
     - r-base
     - r-matrix >=1.2
     - r-rcpp >=0.12.12
-    - r-rcpparmadillo >=0.7.600.1.0
-    - r-rcppparallel
     - r-snowballc
     - r-fastmatch
     - r-magrittr
