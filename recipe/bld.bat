@@ -5,7 +5,7 @@
 
 sed -i -e "s/void R_init_quanteda/__declspec(dllexport) void R_init_quanteda/" src/RcppExports.cpp
 IF %ERRORLEVEL% NEQ 0 exit 1
-sed -i -e "s?PKG_LIBS =?PKG_LIBS = -L%PREFIX%/lib/R/lib/x64 ?" src/Makevars.win
+sed -i -e "s/$(LAPACK_LIBS) $(BLAS_LIBS)//" src/Makevars.win
 IF %ERRORLEVEL% NEQ 0 exit 1
 
 "%R%" CMD INSTALL --build . %R_ARGS%
