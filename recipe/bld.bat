@@ -4,7 +4,9 @@
 :: set PATH=%PATH%;%PREFIX%\lib\R\library\RcppParallel\lib\x64
 
 sed -i -e "s/void R_init_quanteda/__declspec(dllexport) void R_init_quanteda/" src/RcppExports.cpp
-sed -i -e "s/PKG_LIBS =/PKG_LIBS = -L%PREFIX%/lib/R/lib/x64 /" src/Makevars.win
+IF %ERRORLEVEL% NEQ 0 exit 1
+sed -i -e "s?PKG_LIBS =?PKG_LIBS = -L%PREFIX%/lib/R/lib/x64 ?" src/Makevars.win
+IF %ERRORLEVEL% NEQ 0 exit 1
 
 "%R%" CMD INSTALL --build . %R_ARGS%
 IF %ERRORLEVEL% NEQ 0 exit 1
