@@ -211,5 +211,4 @@ Feedstock Maintainers
 =====================
 
 * [@conda-forge/r](https://github.com/orgs/conda-forge/teams/r/)
-* [@stevierene82](https://github.com/stevierene82/)
 
