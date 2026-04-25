@@ -1,18 +1,18 @@
-{% set version = "4.3.1" %}
+{% set version = "4.4" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
   name: r-quanteda
-  version: {{ version|replace("-", "_") }}
+  version: "{{ version|replace("-", "_") }}"
 
 source:
   url:
     - {{ cran_mirror }}/src/contrib/quanteda_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/quanteda/quanteda_{{ version }}.tar.gz
-  sha256: 100d20bc47cf056bf2ca030eb9ae91c376cf575063d76126563acd3b1b6699f3
+  sha256: 8d276c3ae9b5a2c2941b4c32192365301493a0d40a7e3900eae39185712f828a
 
 build:
-  number: 4
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -64,8 +64,8 @@ test:
 about:
   home: https://quanteda.io
   license: GPL-3.0-only
-  summary: A fast, flexible, and comprehensive framework for quantitative text analysis in R.  Provides functionality for corpus management, creating and manipulating tokens and ngrams, exploring keywords in context, forming and manipulating sparse matrices of documents by features and feature co-occurrences, analyzing keywords,
-    computing feature similarities and distances, applying content dictionaries, applying supervised and unsupervised machine learning, visually representing text and text analyses, and more.
+  summary: A fast, flexible, and comprehensive framework for quantitative text analysis in R.  Provides functionality for corpus management, creating and manipulating tokens and ngrams, exploring keywords in context, forming and manipulating sparse matrices of documents by features and feature co-occurrences, analyzing
+    keywords, computing feature similarities and distances, applying content dictionaries, applying supervised and unsupervised machine learning, visually representing text and text analyses, and more.
   license_family: GPL3
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
@@ -73,7 +73,6 @@ about:
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - stevierene82
 
 # Package: quanteda
 # Version: 1.5.1
